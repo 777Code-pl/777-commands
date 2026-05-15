@@ -27,7 +27,7 @@ For maven:
     <dependency>
         <groupId>com.github.777Code-pl</groupId>
         <artifactId>777-commands</artifactId>
-        <version>1.0.0</version>
+        <version>VERSION</version>
     </dependency>
   </dependencies>
 ```
@@ -35,6 +35,6 @@ For maven:
 For gradle:
 ```groovy
 dependencies {
-    implementation 'com.github.777Code-pl:777-commands:v1.0.0'
+    implementation 'com.github.777Code-pl:777-commands:VERSION'
 }
 ```
