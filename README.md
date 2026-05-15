@@ -1,5 +1,5 @@
 # 777-Utilities <img align="right" src="https://jitpack.io/v/777Code-pl/777-commands.svg" alt="JitPack Badge" />
-Simple bukkit utilities library
+Simple bukkit commands library
 
 ### Repository
 For maven:
