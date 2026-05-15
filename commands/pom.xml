@@ -6,7 +6,7 @@
 
     <groupId>dev.darkness</groupId>
     <artifactId>777-commands</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>777-commands</name>

@@ -157,26 +157,23 @@ public class BukkitCommand extends org.bukkit.command.Command {
     public List<String> tabComplete(@NotNull CommandSender sender, @NotNull String alias, @NotNull String[] args) {
         if (args.length == 1) {
             List<String> suggestions = new ArrayList<>();
+            String input = args[0].toLowerCase();
 
             for (ExecuteMethodHandle handle : handles) {
                 if (!handle.isRootExecute()) {
                     String sub = handle.getSubCommand();
-                    if (sub.toLowerCase().startsWith(args[0].toLowerCase())) {
+                    if (sub.toLowerCase().startsWith(input)) {
                         suggestions.add(sub);
                     }
                 }
             }
 
-            if (!suggestions.isEmpty()) {
-                return suggestions;
-            }
-
             ExecuteMethodHandle rootHandle = getRootHandle();
             if (rootHandle != null) {
-                return getArgSuggestions(sender, args, rootHandle, 0);
+                suggestions.addAll(getArgSuggestions(sender, args, rootHandle, 0));
             }
 
-            return Collections.emptyList();
+            return suggestions;
         }
 
         ExecuteMethodHandle handle = resolveHandleForTab(args);
